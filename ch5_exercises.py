@@ -14,6 +14,7 @@ else:
 
 
 # 3) Prompt the user to enter a lowercase letter. Use the 'in' operator to check if the letter is a vowel (e.g. in the string 'aeiou'). If so, print, "___ is a vowel." Else, print, "___ is NOT a vowel."
+# 4) What happens if the user enters a capital letter instead of lowercase? Refactor your code for problem 3 so that it works for both capital and lowercase vowels!
 user_letter = input('Enter a letter: ')
 vowels = 'aeiou'
 if user_letter.lower() in vowels:
@@ -21,5 +22,3 @@ if user_letter.lower() in vowels:
 else:
     print(user_letter, "is NOT a vowel.")
 
-
-# 4) What happens if the user enters a capital letter instead of lowercase? Refactor your code for problem 3 so that it works for both capital and lowercase vowels!
