@@ -44,3 +44,27 @@ for index in range(len(gibberish)):
 
 
 # While loop exercises
+fuel_level = 0
+num_astronauts = 0
+spacecraft_altitude = 0
+
+while fuel_level < 5000 or fuel_level > 30000:
+    fuel_level = int(input("What is your starting fuel level? "))
+    if fuel_level < 5000 or fuel_level > 30000:
+        print("Invalid entry. Enter a number between 5,000 and 30,000.")
+
+while num_astronauts <= 0 or num_astronauts > 8:
+    num_astronauts = int(input("How many astronauts are traveling with you? "))
+    if num_astronauts <= 0 or num_astronauts > 8:
+        print("Invalid entry. Number of astronauts must be between 1 and 7.")
+
+while fuel_level - num_astronauts*100 >= 0:
+    fuel_level -= 100*num_astronauts
+    spacecraft_altitude += 50
+
+print("The spacecraft gained an altitude of", spacecraft_altitude, "km and has", fuel_level, "kg of fuel left.")
+
+if spacecraft_altitude >= 2000:
+    print("Orbit achieved!")
+else:
+    print("Failed to reach orbit.")
